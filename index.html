@@ -22,9 +22,69 @@
                 </nav>
                <div class="header-text">
                   <p>UI/UX Designer</p>
-                  <h1>Hi ,I am Damilola Osoba From Nigeria</h1>
+                  <h1>Hi ,I am Osoba <span>Damilola</span> <br>From Nigeria</h1>
                </div>
              </div>
        </div>
+       <!---------------about----------->
+       <div id="about">
+         <div class="container">
+            <div class="row">
+                  <div class="about-col-1">
+                     <img src="user.png">
+                  </div>
+                  <div class="about-col-2">
+                  <h1 class="sub-title">About Me<br></h1>
+                  <p>Hello today is a braind new dayThe HTML <br>
+                      tag is a block-level element that is used <br>
+                      to define a paragraph of text in a web page.<br>
+                       It creates a new line before and after the<br>
+                        element, taking up 
+                     the full width of its parent container. </p>
+
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                           <li><span>UI/UX</span><br>Designing web app</li>
+                           <li><span>Web development</span><br>Web development</li>
+                           <li><span>App Development</span><br>Building Andriod /IOS</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                           <li><span>2024</span><br>Designing web app Institute</li>
+                           <li><span>2024</span><br>Web development Institute</li>
+                           <li><span>2023</span><br>Building Andriod /IOS Institute</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                           <li><span>2024-2026</span><br>McNeese State University</li>
+                           <li><span>2024-2026</span><br>McNeese State University</li>
+                           <li><span>2023-2026</span><br>McNeese State University</li>
+                        </ul>
+                     </div>
+            </div>
+          </div>
+         </div>
+       </div>
+<script>
+   var tablinks = document.getElementsByClassName(tab-links);
+   var tabcontents = document.getElementsByClassName(tab-contents);
+   function opentab(tabname){
+      for(tablink of tablinks){
+         tablinks.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+         tabcontent.classList.remove("active-tab");
+      }
+   }
+</script>
+
+
     </body>
 </html>
