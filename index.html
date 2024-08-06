@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <title>Damilola Osoba Portfolio website</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
        <div id="header">
@@ -72,17 +73,88 @@
           </div>
          </div>
        </div>
+<!--------------------Services------------>
+   <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+         <div>
+            <i class="fa fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Hey this is my day 2 of trying to be consistent in improving 
+               my self and be a better version of my self both academically ,
+               professionally and religiously</p>
+               <a href="#">Learn More</a>
+         </div>
+         <div>
+            <i class="fa fa-crop"></i>
+            <h2>UI/UX</h2>
+            <p>Hey this is my day 2 of trying to be consistent in improving 
+               my self and be a better version of my self both academically ,
+               professionally and religiously</p>
+               <a href="#">Learn More</a>
+         </div>
+         <div>
+            <i class="fa fa-car"></i>
+            <h2>App Design</h2>
+            <p>Hey this is my day 2 of trying to be consistent in improving 
+               my self and be a better version of my self both academically ,
+               professionally and religiously</p>
+               <a href="#">Learn More</a>
+         </div>
+
+      </div>
+    </div>    
+   </div>
+   <!-------------portfolio------------------------------------------>
+<div id="portfolio">
+   <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+         <div class="work">
+            <img src="work-1.png" alt="">
+            <div class="layer">
+               <h3>Social Media App</h3>
+               <p>The app connects you to the talented people around the world</p>
+               <a href="#"><i class="fa fa-link"></i></a>
+            </div>
+         </div>
+         <div class="work">
+            <img src="work-2.png" alt="">
+            <div class="layer">
+               <h3>Music App</h3>
+               <p>The app connects you to the talented people around the world</p>
+               <a href="#"><i class="fa fa-link"></i></a>
+            </div>
+         </div>
+         <div class="work">
+            <img src="work-1.png" alt="">
+            <div class="layer">
+               <h3>Basketball App</h3>
+               <p>The app connects you to the talented people around the world</p>
+               <a href="#"><i class="fa fa-link"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
 <script>
-   var tablinks = document.getElementsByClassName(tab-links);
-   var tabcontents = document.getElementsByClassName(tab-contents);
+   var tablinks = document.getElementsByClassName("tab-links");
+   var tabcontents = document.getElementsByClassName("tab-contents");
    function opentab(tabname){
       for(tablink of tablinks){
-         tablinks.classList.remove("active-link");
+         tablink.classList.remove("active-link");
       }
       for(tabcontent of tabcontents){
          tabcontent.classList.remove("active-tab");
       }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
    }
+
 </script>
 
 
