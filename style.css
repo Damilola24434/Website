@@ -1,233 +1,250 @@
-*{
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
     margin: 0;
-    padding:0;
-    font-family:'Poppins', sans-serif;
-    box-sizing: border-box;
+    padding: 0;
+    scroll-behavior: smooth; /* Ensures smooth scrolling */
 }
-body{
-    background: #080808;
-    color : #fff;
+
+header {
+    background-color: #333;
+    padding: 10px 0;
 }
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image: url(background.png);
-    background-size: cover;
-    background-position: center;
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.container{
-    padding:10px 10%;
-}
-nav{
+
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap:wrap;
 }
-.logo{
-    width: 140px;   
+
+nav .logo {
+    max-height: 50px;
 }
-nav ul li{
-   display: inline-block;
-   list-style:none;
-   margin: 10px 20px; 
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
-nav ul li a{
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    position: relative;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
-nav ul li a::after{
-    content: '';
-    width:0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px; 
-    transition :0.5s;
-}
-nav ul li a:hover::after{
-    width: 100%;
-}
-.header-text{
-    margin-top: 20%;
-    font-size:30px;
-}
-.header-text h1{
-  font-size: 60px;
-  margin-top: 20px;
 
-}
-.header-text h1 span{
-    color:#ff004f;
-}
-/*---------------about-----------*/
-#about{
-    padding: 80px 0;
-    color: #ababab;
-}
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.about-col-1{
-   flex-basis: 35%; 
-}
-.about-col-1 img{
-    width: 100%;
-    border-radius: 15px;
-}
-.about-col-2{
-    flex-basis: 60%;
-}
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
+nav ul li a:hover {
+    background-color: #555;
     color: #fff;
+    border-radius: 5px;
+}
 
-}
-.tab-titles{
-    display: flex;
-    margin: 20px 0 40px;
-}
-.tab-links{
-  margin-right:50px;
-   font-size: 18px;
-   font-weight:  500;
-   cursor: pointer;
-   position: relative;
-}
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background:#ff004f;
-    position:absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links.active-link::after{
-  width: 50%;  
-}
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-    color: #b54769;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-/*---------------Services--------------------*/
-#services{
-    padding: 30px 0;
-}
-.services-list{
-    display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.services-list div{
-   background:#262626;
-   padding: 40px;
-   font-size: 13px;
-   font-weight: 300;
-   border-radius: 10px;
-   transition: background 0.5s, transform 0.5s;
-}
-.services-list div i{
-  font-size: 50px;
-  margin-bottom: 30px;  
-}
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.services-list div:hover{
-    background: #ff004f;
-    transform: translateY(-10px);
-}
-/*--------------------portfolio---------------------*/
-#portfolio{
+section {
     padding: 50px 0;
+    border-bottom: 1px solid #333; /* Adds a subtle line between sections */
 }
-.work-list{
-    display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px; 
-    margin-top: 50px;
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
+
+.home-content h1 {
+    font-size: 4rem;
 }
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: tramsform 0.5s;
-}
-.layer{
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+
+.about-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsive layout */
 }
-.layer h3{
-    font-weight: 500;
+
+.profile-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about-left, .about-right {
+    flex: 1;
+}
+
+.about-left {
+    margin-right: 20px;
+}
+
+.about-right {
+    max-width: 600px;
+}
+
+.tabs {
     margin-bottom: 20px;
 }
-.layer a{
-    margin-top: 20px;
-    color: #ff004f;
+
+.tab-links {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.tab-links:hover {
+    background: #555;
+}
+
+.btn, .btn2 {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #007bff;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height:60px;
-    border-radius: 50%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn2 {
+    background: #28a745;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsive layout */
+}
+
+.contact-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-right {
+    flex: 1;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right input, .contact-right textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-right button {
+    background: #28a745;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-right button:hover {
+    background: #218838;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.copyright {
     text-align: center;
-}
-.work:hover img{
-    transform: scale(1.1);
-}
-.work:hover .layer{
-    height: 100%;
+    padding: 10px 0;
+    background-color: #333;
 }
 
+/* Work Section Styles */
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 columns with responsive size */
+    gap: 20px; /* Space between items */
+}
 
+.work {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures that content doesn't overflow the container */
+}
 
+.work img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures image covers the container */
+    border-radius: 5px;
+}
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .about-left, .about-right {
+        margin: 0;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-left, .contact-right {
+        margin: 0;
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 2 columns for medium screens */
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-list {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+
+    .home-content h1 {
+        font-size: 1.5rem;
+    }
+}
