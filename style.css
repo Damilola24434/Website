@@ -48,33 +48,48 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #00a651;
     color: #fff;
     border-radius: 5px;
 }
 
 section {
     padding: 50px 0;
-    border-bottom: 1px solid #333; /* Adds a subtle line between sections */
+    border-bottom: 1px solid #333;
 }
 
 .home-content {
     display: flex;
+    flex-direction: column; 
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
-    text-align: center;
+    text-align: left;
+    padding-left: 20px; 
 }
 
 .home-content h1 {
-    font-size: 4rem;
+    font-size: 3em; 
+    margin: 0;
 }
+
+.home-content span {
+    font-size: 1.2em; 
+}
+
+
 
 .about-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ensures responsive layout */
+    flex-wrap: wrap; 
+}
+.header {
+    font-size: 4em; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Makes the text bold */
+    margin: 0; /* Removes default margins */
+    text-align: center; /* Optional: Center the header */
 }
 
 .profile-img {
@@ -104,15 +119,24 @@ section {
     background: #333;
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 15px 20px; 
     cursor: pointer;
     margin-right: 10px;
     border-radius: 5px;
     transition: background 0.3s;
+    font-size: 1.1em; 
 }
+
 
 .tab-links:hover {
     background: #555;
+}
+.tab-content {
+    display: none; /* Hide all tab content by default */
+}
+
+.tab-content.active {
+    display: block; /* Only the active tab content will be displayed */
 }
 
 .btn, .btn2 {
@@ -132,7 +156,7 @@ section {
 .contact-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ensures responsive layout */
+    flex-wrap: wrap; 
 }
 
 .contact-left {
@@ -193,21 +217,20 @@ section {
 /* Work Section Styles */
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 columns with responsive size */
-    gap: 20px; /* Space between items */
+    gap: 20px; 
 }
 
 .work {
     background-color: #444;
     padding: 20px;
     border-radius: 5px;
-    overflow: hidden; /* Ensures that content doesn't overflow the container */
+    overflow: hidden; 
 }
 
 .work img {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures image covers the container */
+    height: auto; 
+    object-fit: cover; 
     border-radius: 5px;
 }
 
@@ -231,7 +254,7 @@ section {
     }
 
     .work-list {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 2 columns for medium screens */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     }
 
     .home-content h1 {
@@ -241,7 +264,7 @@ section {
 
 @media (max-width: 480px) {
     .work-list {
-        grid-template-columns: 1fr; /* 1 column for small screens */
+        grid-template-columns: 1fr; 
     }
 
     .home-content h1 {
